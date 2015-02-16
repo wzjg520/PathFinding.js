@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>PathFinding.js</title>
+
+	    <script type="text/javascript" src="./lib/raphael-min.js"></script>
+    <script type="text/javascript" src="./lib/es5-shim.min.js"></script>
+    <script type="text/javascript" src="./lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="./lib/state-machine.min.js"></script>
+    <script type="text/javascript" src="./lib/async.min.js"></script>
+
+    <script type="text/javascript" src="./lib/pathfinding-browser.min.js"></script>
+
+
+    <script type="text/javascript" src="./js/june.js"></script>
+
+    <style>
+    	td{
+    		padding:5px;
+			border:1px solid #ccc;
+    	}
+
+    	.selected{
+    		background:#ccc;
+    	}
+
+    	.road_selected{
+    		background:red;
+    		color:#fff;
+    	}
+    	input[type="text"]{
+    		width:80px;
+    	}
+    	.zoom{
+    		margin:10px auto;
+    		width:40%;
+    	}
+    	.end_zoom{
+    		padding:10px 0 0 0;
+    	}
+    	td{
+    		cursor:pointer;
+    	}
+		
+    </style>
+  </head>
+  <body>
+  	<table id="draw_area"></table>
+  	<div class="zoom">
+  		<div class="start_zoom">
+			<label for="start">起点</label>
+		  	<input type="text" id="start">
+		</div>
+		<div class="end_zoom">
+			<label for="end">终点</label>
+		  	<input type="text" id="end">
+		</div>
+		<p>
+			<button id="reload">查询路线</button>
+  		</p>
+  	</div>
+	
+	
+   
+  </body>
+</html>
