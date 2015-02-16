@@ -30,11 +30,13 @@ for(var i in nodes){
 	html += '<tr>';
 
 	for(var j in nodes[i]){
-		var selected='';
+		var selected='',
+			str='';
 		if(nodes[i][j]['walkable'] == false){
 			selected = 'class="selected"'
+			str = +nodes[i][j]['x']+'排,'+i+'号'
 		}
-		html += '<td local="'+nodes[i][j]['x']+','+i+'"'+selected+'>' +nodes[i][j]['x']+','+i+ '</td>\n';
+		html += '<td local="'+nodes[i][j]['x']+','+i+'"'+selected+'>' +str+ '</td>\n';
 	}
 
 	html +='</tr>';
@@ -52,6 +54,7 @@ $(function(){
 		}else{
 			$('#start').val(local);
 		}
+		$(this).addClass('pointer')
 	})
 
 	$('#reload').click(function(){

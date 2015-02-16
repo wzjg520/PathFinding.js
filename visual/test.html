@@ -16,13 +16,20 @@
     <script type="text/javascript" src="./js/june.js"></script>
 
     <style>
+    	table{
+    		border:1px solid #ccc;
+    		font-size:9px;
+    	}
     	td{
-    		padding:5px;
-			border:1px solid #ccc;
+    		width:30px;
+    		height:30px;
+			border:none;
+			min-width: 40px;
     	}
 
     	.selected{
     		background:#ccc;
+    		cellSpacing:1px;
     	}
 
     	.road_selected{
@@ -42,11 +49,16 @@
     	td{
     		cursor:pointer;
     	}
+
+    	.pointer{
+    		border-radius:50px;
+    		background:green;
+    	}
 		
     </style>
   </head>
   <body>
-  	<table id="draw_area"></table>
+  	<table id="draw_area" cellSpacing="0"></table>
   	<div class="zoom">
   		<div class="start_zoom">
 			<label for="start">起点</label>
